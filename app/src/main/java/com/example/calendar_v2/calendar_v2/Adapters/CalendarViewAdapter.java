@@ -9,8 +9,11 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.calendar_v2.MyConfig;
+
 import com.example.calendar_v2.R;
+import com.example.calendar_v2.calendar_v2.MyConfig;
+
+import java.time.LocalDate;
 
 public class CalendarViewAdapter extends PagerAdapter {
 
@@ -55,6 +58,11 @@ public class CalendarViewAdapter extends PagerAdapter {
 
 
     private LinearLayout getMonthView(int pos) {
+        int index = pos- MyConfig.DEFAULT_PAGE_VALUE;
+        LocalDate monthToShow = LocalDate.now().plusMonths(index);
+        monthToShow = monthToShow.minusDays(monthToShow.getDayOfMonth()-1);
+//        int daysInFrontMonth = monthToShow.getDayOfWeek()
+
         LinearLayout monthView = new LinearLayout(context);
         monthView.setOrientation(LinearLayout.VERTICAL);
         for (int r = 0; r < MyConfig.NUMBER_OF_ROWS; ++r) {

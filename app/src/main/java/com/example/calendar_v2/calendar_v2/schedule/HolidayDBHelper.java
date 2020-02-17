@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.example.calendar_v2.schedule.Holiday;
-import com.example.calendar_v2.time.Date;
+
+import com.example.calendar_v2.calendar_v2.time.Date;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

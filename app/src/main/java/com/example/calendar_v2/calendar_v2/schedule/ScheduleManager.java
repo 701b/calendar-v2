@@ -2,13 +2,9 @@ package com.example.calendar_v2.calendar_v2.schedule;
 
 import android.content.Context;
 
-import com.example.calendar_v2.schedule.Holiday;
-import com.example.calendar_v2.schedule.HolidayDBHelper;
-import com.example.calendar_v2.schedule.Schedule;
-import com.example.calendar_v2.schedule.UserSchedule;
-import com.example.calendar_v2.schedule.UserScheduleDBHelper;
-import com.example.calendar_v2.time.Date;
-import com.example.calendar_v2.time.DateTime;
+
+import com.example.calendar_v2.calendar_v2.time.Date;
+import com.example.calendar_v2.calendar_v2.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.Comparator;

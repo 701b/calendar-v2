@@ -2,7 +2,7 @@ package com.example.calendar_v2.calendar_v2.time;
 
 import androidx.annotation.NonNull;
 
-import com.example.calendar_v2.time.DateTime;
+
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -35,11 +35,11 @@ public class Date {
      * @param date2 날짜2
      * @return 두 날짜 사이의 날의 수
      */
-    public static int getNumberOfDayBetween(com.example.calendar_v2.time.Date date1, com.example.calendar_v2.time.Date date2) {
+    public static int getNumberOfDayBetween(Date date1, Date date2) {
         return (int) ChronoUnit.DAYS.between(date1.toLocalDate(), date2.toLocalDate()) + 1;
     }
 
-    public static int getNumberOfWeekBetween(com.example.calendar_v2.time.Date date1, com.example.calendar_v2.time.Date date2) {
+    public static int getNumberOfWeekBetween(Date date1, Date date2) {
         return (int) ChronoUnit.WEEKS.between(date1.toLocalDate(), date2.toLocalDate()) + 1;
     }
 
@@ -97,8 +97,8 @@ public class Date {
 
     @Override
     @NonNull
-    public com.example.calendar_v2.time.Date clone() throws CloneNotSupportedException {
-        return (com.example.calendar_v2.time.Date) super.clone();
+    public Date clone() throws CloneNotSupportedException {
+        return (Date) super.clone();
     }
 
 

@@ -2,9 +2,9 @@ package com.example.calendar_v2.calendar_v2.schedule;
 
 import android.graphics.Color;
 
-import com.example.calendar_v2.schedule.Schedule;
-import com.example.calendar_v2.time.Date;
-import com.example.calendar_v2.time.DateTime;
+import com.example.calendar_v2.calendar_v2.time.Date;
+import com.example.calendar_v2.calendar_v2.time.DateTime;
+
 
 /**
  * 공휴일을 담당하는 클래스이다. 공휴일에 관한 정보를 담고 있다.

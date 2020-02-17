@@ -2,11 +2,11 @@ package com.example.calendar_v2.calendar_v2;
 
 import android.content.Context;
 
-import com.example.calendar_v2.DayData;
-import com.example.calendar_v2.schedule.Schedule;
-import com.example.calendar_v2.schedule.ScheduleManager;
-import com.example.calendar_v2.time.Date;
-import com.example.calendar_v2.time.DateTime;
+
+import com.example.calendar_v2.calendar_v2.schedule.Schedule;
+import com.example.calendar_v2.calendar_v2.schedule.ScheduleManager;
+import com.example.calendar_v2.calendar_v2.time.Date;
+import com.example.calendar_v2.calendar_v2.time.DateTime;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

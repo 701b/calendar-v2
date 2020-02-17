@@ -5,10 +5,9 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.calendar_v2.Adapters.CalendarViewAdapter;
 import com.example.calendar_v2.R;
+import com.example.calendar_v2.calendar_v2.Adapters.CalendarViewAdapter;
 import com.example.calendar_v2.calendar_v2.Views.MyCalendarView;
-
 
 public class ShowCalendarActivity extends AppCompatActivity {
     private MyCalendarView myCalendarView;

@@ -1,7 +1,9 @@
 package com.example.calendar_v2.calendar_v2;
 
-import com.example.calendar_v2.schedule.Schedule;
-import com.example.calendar_v2.time.Date;
+
+
+import com.example.calendar_v2.calendar_v2.schedule.Schedule;
+import com.example.calendar_v2.calendar_v2.time.Date;
 
 import java.util.HashMap;
 import java.util.Map;

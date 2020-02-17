@@ -2,9 +2,9 @@ package com.example.calendar_v2.calendar_v2.schedule;
 
 import android.graphics.Color;
 
-import com.example.calendar_v2.schedule.Schedule;
-import com.example.calendar_v2.time.Date;
-import com.example.calendar_v2.time.DateTime;
+import com.example.calendar_v2.calendar_v2.time.Date;
+import com.example.calendar_v2.calendar_v2.time.DateTime;
+
 
 /**
  * 앱 사용자가 추가하는 스케줄을 담당하는 클래스이다.

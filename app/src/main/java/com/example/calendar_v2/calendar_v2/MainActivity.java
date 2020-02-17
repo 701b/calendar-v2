@@ -5,11 +5,10 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.calendar_v2.Calendar;
-import com.example.calendar_v2.DayData;
+
 import com.example.calendar_v2.R;
-import com.example.calendar_v2.schedule.ScheduleManager;
-import com.example.calendar_v2.time.Date;
+import com.example.calendar_v2.calendar_v2.schedule.ScheduleManager;
+import com.example.calendar_v2.calendar_v2.time.Date;
 
 import java.util.List;
 
