@@ -54,7 +54,7 @@ public class CalendarViewAdapter extends PagerAdapter {
     }
 
 
-    private LinearLayout getMonthView() {
+    private LinearLayout getMonthView(int pos) {
         LinearLayout monthView = new LinearLayout(context);
         monthView.setOrientation(LinearLayout.VERTICAL);
         for (int r = 0; r < MyConfig.NUMBER_OF_ROWS; ++r) {

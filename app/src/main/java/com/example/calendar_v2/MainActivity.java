@@ -25,12 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Date testStartDate = new Date(2020, 1, 1);
         Date testEndDate = new Date(2020, 2, 1);
 
-        //scheduleManager.addUserSchedule(new UserSchedule("1 - 1", new Date(2020, 1, 1), new Date(2020, 1, 1)));
-        //scheduleManager.addUserSchedule(new UserSchedule("1 - 5", new Date(2020, 1, 1), new Date(2020, 1, 5)));
-        //scheduleManager.addUserSchedule(new UserSchedule("20 - 25", new Date(2020, 1, 20), new Date(2020, 1, 25)));
-        //scheduleManager.addUserSchedule(new UserSchedule("15 - 25", new Date(2020, 1, 15), new Date(2020, 1, 25)));
 
-        List<DayData> list = scheduleManager.createDayDataListBetween(testStartDate, testEndDate);
+
+        List<DayData> list = calendar.createDayDataListBetween(testStartDate, testEndDate);
 
         for (int i = 0; i < Date.getNumberOfDayBetween(testStartDate, testEndDate); i++) {
             DayData dayData = list.get(i);

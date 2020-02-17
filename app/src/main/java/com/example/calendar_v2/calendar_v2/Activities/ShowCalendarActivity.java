@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.calendar_v2.Adapters.CalendarViewAdapter;
 import com.example.calendar_v2.R;
-import com.example.calendar_v2.Views.MyCalendarView;
+import com.example.calendar_v2.calendar_v2.Views.MyCalendarView;
+
 
 public class ShowCalendarActivity extends AppCompatActivity {
     private MyCalendarView myCalendarView;
@@ -16,6 +17,6 @@ public class ShowCalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_calendar_layout);
         myCalendarView = (MyCalendarView)findViewById(R.id.calendar_view);
-        myCalendarView.setAdapter(new CalendarViewAdapter());
+        myCalendarView.setAdapter(new CalendarViewAdapter(this));
     }
 }

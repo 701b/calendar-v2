@@ -50,7 +50,7 @@ public class Date {
      * @param other 비교할 Date
      * @return other보다 나중이라면 0보다 큰 값을, other보다 이전이라면 0보다 작은 값을, 같다면 0
      */
-    public int compareTo(com.example.calendar_v2.time.Date other) {
+    public int compareTo(Date other) {
         int cmp = year - other.year;
 
         if (cmp == 0) {
