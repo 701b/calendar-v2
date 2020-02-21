@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        // test code --
         Calendar calendar = new Calendar(this);
         ScheduleManager scheduleManager = calendar.getScheduleManager();
 
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         //scheduleManager.addUserSchedule(new UserSchedule("20 - 25", new Date(2020, 1, 20), new Date(2020, 1, 25)));
         //scheduleManager.addUserSchedule(new UserSchedule("15 - 25", new Date(2020, 1, 15), new Date(2020, 1, 25)));
 
-        List<DayData> list = scheduleManager.createDayDataListBetween(testStartDate, testEndDate);
+        List<DayData> list = calendar.createDayDataListBetween(testStartDate, testEndDate);
 
         for (int i = 0; i < Date.getNumberOfDayBetween(testStartDate, testEndDate); i++) {
             DayData dayData = list.get(i);
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("message", dayData.getDate() + " 스케줄x");
             }
         }
+        // end test code --
 
     }
 }
