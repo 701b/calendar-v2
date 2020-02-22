@@ -68,6 +68,7 @@ public class DayData {
         return date;
     }
 
+    public Map<Integer, Schedule> getScheduleMap() {  return scheduleMap;  }
 
     /* Exception Class Line*/
     /**

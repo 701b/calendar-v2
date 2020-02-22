@@ -84,15 +84,20 @@ public class Date {
         return new DateTime(year, month, dayOfMonth, hour, minute);
     }
 
-    public String toString() {
-        String dateStr;
-        String[] dayOfWeekStrs = {"월", "화", "수", "목", "금", "토", "일"};
 
-        dateStr = month + "월 "
-                + dayOfMonth + "일 "
-                + "(" + dayOfWeekStrs[toLocalDate().getDayOfWeek().getValue() - 1] + ")";
-
-        return dateStr;
+    public String toString(boolean y, boolean m, boolean d, boolean dow){
+        StringBuilder builder = new StringBuilder();
+        if(y)
+            builder.append(year + "년 ");
+        if(m)
+            builder.append(month + "월 ");
+        if(d)
+            builder.append(dayOfMonth + "일 ");
+        if(dow) {
+            String[] dayOfWeekStrs = {"월", "화", "수", "목", "금", "토", "일"};
+            builder.append("(" + dayOfWeekStrs[toLocalDate().getDayOfWeek().getValue() - 1] + ")");
+        }
+        return new String(builder).trim();
     }
 
     @Override
@@ -100,6 +105,8 @@ public class Date {
     public Date clone() throws CloneNotSupportedException {
         return (Date) super.clone();
     }
+
+
 
 
     /* Getter Setter Line*/
