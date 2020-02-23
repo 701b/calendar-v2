@@ -45,7 +45,7 @@ public class RefreshScheduleHelper {
                         continue;
                     }
                     else{
-                        scheduleBlocks[c%7][c/7][index].setBackgroundColor(Color.RED);
+                        scheduleBlocks[c%7][c/7][index].setBackgroundColor(context.getResources().getColor(R.color.scheduleBlockColor));
                     }
 
                 }

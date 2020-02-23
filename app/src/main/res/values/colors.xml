@@ -5,6 +5,5 @@
     <color name="colorAccent">#4CAF50</color>
     <color name="basicTextColor">#000000</color>
     <color name="dayTextColor">#000000</color>
-
     <color name="scheduleBlockColor">#808080</color>
 </resources>
