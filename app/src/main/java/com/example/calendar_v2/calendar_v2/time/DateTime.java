@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 
 import java.time.LocalDateTime;
 
-public class DateTime {
+public class DateTime implements Cloneable {
 
     private int year;
     private int month;
@@ -174,8 +174,8 @@ public class DateTime {
 
     @Override
     @NonNull
-    public Date clone() throws CloneNotSupportedException {
-        return (Date) super.clone();
+    public DateTime clone() throws CloneNotSupportedException {
+        return (DateTime) super.clone();
     }
 
 
