@@ -19,12 +19,12 @@ import java.util.Map;
 
 public class RefreshScheduleHelper {
     private Context context;
-    private TextView[][] scheduleBlocks = new TextView[MyConfig.NUMBER_OF_COLUMNS][MyConfig.NUMBER_OF_ROWS];
+    private TextView[][][] scheduleBlocks;
     private Calendar calendar;
     private List<DayData> list = new ArrayList<>();
     private Map<Integer, Schedule> map = new HashMap<>();
 
-    public RefreshScheduleHelper(Context context, TextView[][] scheduleBlocks) {
+    public RefreshScheduleHelper(Context context, TextView[][][] scheduleBlocks) {
         this.context = context;
         this.calendar = new Calendar(context);
         this.scheduleBlocks = scheduleBlocks;
@@ -43,7 +43,7 @@ public class RefreshScheduleHelper {
                         continue;
                     }
                     else{
-                        scheduleBlocks[c%7][index].setBackgroundColor(Color.RED);
+                        scheduleBlocks[c%7][c/7][index].setBackgroundColor(Color.RED);
                     }
 
                 }

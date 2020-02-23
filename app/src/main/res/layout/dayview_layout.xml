@@ -37,7 +37,7 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/s0"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -45,7 +45,7 @@
         android:text="s1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/s1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -53,7 +53,7 @@
         android:text="s2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/s2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -61,7 +61,7 @@
         android:text="s3" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/s3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"

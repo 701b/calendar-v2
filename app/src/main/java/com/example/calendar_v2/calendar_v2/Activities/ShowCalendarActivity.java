@@ -1,7 +1,12 @@
 package com.example.calendar_v2.calendar_v2.Activities;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.TextSwitcher;
 import android.widget.TextView;
+import android.widget.ViewSwitcher;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +24,8 @@ import java.time.LocalDate;
 public class ShowCalendarActivity extends AppCompatActivity {
     private MyCalendarView myCalendarView;
     private CalendarViewAdapter adapter;
-    private TextView tv;
+    private TextSwitcher dateSwitcher;
+    private TextView dateText;
     private ViewPager.OnPageChangeListener listener;
     private Date selectedMonth;
     @Override
@@ -34,7 +40,8 @@ public class ShowCalendarActivity extends AppCompatActivity {
     void init(){
         myCalendarView = (MyCalendarView)findViewById(R.id.calendar_view);
         adapter = new CalendarViewAdapter(this);
-        tv = findViewById(R.id.date);
+        dateSwitcher = findViewById(R.id.date_switcher);
+        //dateText = findViewById(R.id.date);
         selectedMonth = new Date(LocalDate.now());
         listener = new ViewPager.OnPageChangeListener() {
             @Override
@@ -45,7 +52,7 @@ public class ShowCalendarActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 selectedMonth = new Date(LocalDate.now().plusMonths(position - MyConfig.DEFAULT_PAGE_VALUE));
-                tv.setText(selectedMonth.toString(true, true, false, false));
+                dateSwitcher.setText(selectedMonth.toString(true, true, false, false));
             }
 
             @Override
@@ -53,10 +60,22 @@ public class ShowCalendarActivity extends AppCompatActivity {
 
             }
         };
+        dateSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
+            @Override
+            public View makeView() {
+                TextView textView = new TextView(ShowCalendarActivity.this);
+                textView.setTextColor(Color.BLACK);
+                textView.setTextSize(60);
+                textView.setGravity(Gravity.CENTER_HORIZONTAL);
+                return textView;
+            }
+        });
     }
 
     void setUI(){
-        tv.setText(selectedMonth.toString(true, true, false, false));
+
+        dateSwitcher.setText(new Date(LocalDate.now()).toString(true, true, false, false));
+        //  dateText.setText(selectedMonth.toString(true, true, false, false));
         myCalendarView.setAdapter(adapter);
         myCalendarView.setCurrentItem(MyConfig.DEFAULT_PAGE_VALUE);
 

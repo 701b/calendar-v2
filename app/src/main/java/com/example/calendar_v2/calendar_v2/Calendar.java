@@ -52,23 +52,25 @@ public class Calendar {
             int numberOfWeeks = 0;
 
             if (scheduleStartDateTime.toDate().compareTo(startDate) < 0) {
-                try {
-                    startToShowDate = startDate.clone();
-                } catch (CloneNotSupportedException e) {
-                    e.printStackTrace();
-                    throw new RuntimeException();
-                }
+                startToShowDate = startDate;
+//                try {
+//                    startToShowDate = startDate.clone();
+//                } catch (CloneNotSupportedException e) {
+//                    e.printStackTrace();
+//                    throw new RuntimeException();
+//                }
             } else {
                 startToShowDate = scheduleStartDateTime.toDate();
             }
 
             if (scheduleEndDateTime.toDate().compareTo(endDate) > 0) {
-                try {
-                    endToShowDate = endDate.clone();
-                } catch (CloneNotSupportedException e) {
-                    e.printStackTrace();
-                    throw new RuntimeException();
-                }
+                endToShowDate = endDate;
+//                try {
+//                    endToShowDate = endDate.clone();
+//                } catch (CloneNotSupportedException e) {
+//                    e.printStackTrace();
+//                    throw new RuntimeException();
+//                }
             } else {
                 endToShowDate = scheduleEndDateTime.toDate();
             }

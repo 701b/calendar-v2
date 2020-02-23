@@ -19,7 +19,7 @@ public class UserScheduleDBHelper extends SQLiteOpenHelper {
     private List<UserSchedule> userSchedules;
 
     public UserScheduleDBHelper(@Nullable Context context, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, "userSchedule2.db", factory, version);
+        super(context, "userSchedule22.db", factory, version);
 
         userSchedules = new ArrayList<>();
         readAll();

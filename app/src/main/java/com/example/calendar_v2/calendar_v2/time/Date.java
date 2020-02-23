@@ -100,11 +100,13 @@ public class Date {
         return new String(builder).trim();
     }
 
+    /*
     @Override
     @NonNull
     public Date clone() throws CloneNotSupportedException {
         return (Date) super.clone();
     }
+     */
 
 
 
