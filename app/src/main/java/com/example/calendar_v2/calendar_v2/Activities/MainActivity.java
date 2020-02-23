@@ -3,12 +3,17 @@ package com.example.calendar_v2.calendar_v2.Activities;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TabHost;
 
 import com.example.calendar_v2.R;
+import com.example.calendar_v2.calendar_v2.Calendar;
+import com.example.calendar_v2.calendar_v2.DayData;
 import com.example.calendar_v2.calendar_v2.schedule.ScheduleManager;
 import com.example.calendar_v2.calendar_v2.schedule.UserSchedule;
 import com.example.calendar_v2.calendar_v2.time.Date;
+
+import java.util.List;
 
 public class MainActivity extends TabActivity {
 
@@ -41,6 +46,20 @@ public class MainActivity extends TabActivity {
                 new Date(2020, 1, 21)));
 
          */
+        Date testStartDate = new Date(2019, 12, 1);
+        Date testEndDate = new Date(2020, 2, 15);
+        List<DayData> list = new Calendar(this).createDayDataListBetween(testStartDate, testEndDate);
+
+        for (int i = 0; i < Date.getNumberOfDayBetween(testStartDate, testEndDate); i++) {
+            DayData dayData = list.get(i);
+
+            for(int s = 0 ; s<4 ; ++s) {
+                if(dayData.getSchedule(s)!=null) {
+                    Log.d("message", testStartDate.toLocalDate().plusDays(i).toString());
+                    Log.d("message", dayData.getDate() + " " + dayData.getSchedule(s).getTitle());
+                }
+            }
+        }
     }
 
     private void setUI() {

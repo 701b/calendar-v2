@@ -33,6 +33,8 @@ public class RefreshScheduleHelper {
     void printSchedule(Date startDate, Date endDate) {
         list = calendar.createDayDataListBetween(startDate, endDate);
         int numberOfDays = Date.getNumberOfDayBetween(startDate, endDate);
+
+        initialize();
         for (int c = 0; c < numberOfDays; ++c) {
             map = list.get(c).getScheduleMap();
             if (map.isEmpty()) {
@@ -50,5 +52,16 @@ public class RefreshScheduleHelper {
             }
         }
 
+    }
+    void initialize(){
+        for(int c = 0 ; c<MyConfig.NUMBER_OF_COLUMNS ; ++c){
+            for(int r = 0 ; r<MyConfig.NUMBER_OF_ROWS ; ++r){
+                for(int s = 0 ; s< MyConfig.NUMBER_OF_SCHEDULE_BLOCKS ; ++s){
+                    scheduleBlocks[c][r][s].setBackgroundColor(Color.WHITE);
+                    scheduleBlocks[c][r][s].setText("");
+
+                }
+            }
+        }
     }
 }
